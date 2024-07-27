@@ -1,38 +1,98 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.maindiv {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh; /* Ensure the background covers the full viewport height */
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.header{
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  background-color: #00cefc;
+}
+  .h1inCourses{
+    font-size: 2.5rem; /* Adjust the font size */
+    color: #0e9ce3; /* Adjust the text color */
+    padding: 10px;;
+    text-align: center; /* Center align the text */
+    margin: 20px 0; /* Add some margin */
+    font-family: 'Arial', sans-serif; /* Set the font family */
+    background-color: #8fcee0;
+  }
+
+.footerdiv{
+  background-color: #ff0000;  /* Background color */
+  border: 5px solid #1ed318;     /* Border with color */
+  border-radius: 5px;         /* Rounded corners */
+  padding: 20px;              /* Padding inside the div */
+  margin: 20px;               /* Margin outside the div */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  width: 300px;               /* Width of the div */
+  height: 200px;              /* Height of the div */
+  text-align: center;         /* Center text alignment */
+  font-family: Arial, sans-serif; 
+  justify-content: center;/* Font family */
 }
 
-.App-link {
-  color: #61dafb;
+/* Hover Effect */
+.footerdiv :hover{
+  background-color: #ea2e2e;  /* Change background on hover */
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Responsive Design */
+@media (max-width: 600px) {
+  div {
+      width: 100%;            /* Full width on small screens */
+      height: auto;           /* Auto height on small screens */
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.h1inhead{
+  background-color: #1ed318;
+}
+.User{
+  text-align: center;
+}
+/* App.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.h1inCourses {
+  color: red;
+  background-color: blue;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.list-group-item {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.list-group-item:hover {
+  background-color: #f1f1f1;
+}
+
+.maindiv {
+  padding-top: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
 }
