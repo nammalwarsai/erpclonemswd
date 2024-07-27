@@ -20,7 +20,7 @@ function App() {
       <div className="maindiv">
         <Header logo={logo} />
         <Routes>
-          <Route path="/" element={<User name="Nammalwar Sai" type="student" />} />
+          <Route path="/" element={<User name="KURAPATI RAJA SAI NAMMALWAR--2300033899" type="student" />} />
           <Route path="/faculty" element={<Faculty />} />
           <Route path="/courses" element={<Courses />} />
           <Route path="/timetable" element={<Timetable/>} />

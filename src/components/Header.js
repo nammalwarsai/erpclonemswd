@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBook, faUser, faCalendarAlt, faTasks, faCheckSquare } from '@fortawesome/free-solid-svg-icons';
 
 const Header = ({ logo }) => {
   return (
@@ -13,22 +15,35 @@ const Header = ({ logo }) => {
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav">
           <li className="nav-item">
-            <Link className="nav-link" to="/courses">MY Courses</Link>
+            <Link className="nav-link" to="/courses">
+              <FontAwesomeIcon icon={faBook} className="mr-2" />
+              MY Courses
+            </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/faculty">Faculty</Link>
+            <Link className="nav-link" to="/faculty">
+              <FontAwesomeIcon icon={faUser} className="mr-2" />
+              Faculty
+            </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/timetable">My Timetable</Link>
+            <Link className="nav-link" to="/timetable">
+              <FontAwesomeIcon icon={faCalendarAlt} className="mr-2" />
+              My Timetable
+            </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="myassignments">My Assignments</Link>
+            <Link className="nav-link" to="/myassignments">
+              <FontAwesomeIcon icon={faTasks} className="mr-2" />
+              My Assignments
+            </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="myattendence">My Attendence</Link>
+            <Link className="nav-link" to="/myattendence">
+              <FontAwesomeIcon icon={faCheckSquare} className="mr-2" />
+              My Attendence
+            </Link>
           </li>
-          
-
         </ul>
       </div>
       <div className="user-info ml-auto">
