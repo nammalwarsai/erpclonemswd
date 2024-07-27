@@ -25,7 +25,7 @@ const Header = ({ logo }) => {
             <Link className="nav-link" to="myassignments">My Assignments</Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="#">My Attendence</Link>
+            <Link className="nav-link" to="myattendence">My Attendence</Link>
           </li>
           <li className="nav-item">
             <Link className="nav-link" to="#">SAC-CLUBS</Link>

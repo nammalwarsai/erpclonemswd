@@ -11,6 +11,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import Timetable from './components/Timetable';
 import Assignments from './components/Assignments';
+import Attendence from './components/Attendence';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path="/courses" element={<Courses />} />
           <Route path="/timetable" element={<Timetable/>} />
           <Route path="/myassignments" element={<Assignments/>} />
+          <Route path="/myattendence" element={<Attendence/>} />
         </Routes>
       </div>
     </Router>
