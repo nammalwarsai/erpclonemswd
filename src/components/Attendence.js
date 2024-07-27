@@ -4,9 +4,16 @@ import React from 'react';
 const Attendence = ({ hours, attendancePercentage }) => {
   return (
     <div>
-      <h2>Attendance Information</h2>
-      <p><strong>Teaching Hours:</strong> {hours}</p>
-      <p><strong>Attendance Percentage:</strong> {attendancePercentage}%</p>
+      <div className="alert alert-dismissible alert-success">
+        <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        <p>
+          Total hours attendend <strong>{hours}25</strong><br />
+          Attendance Percentage: <strong>{attendancePercentage}85%</strong>
+        </p>
+        <a href="https://newerp.kluniversity.in/index.php?r=studentattendance%2Fstudentdailyattendance%2Fcourselist" className="alert-link">
+          Click here to check your Attendance
+        </a>
+      </div>
     </div>
   );
 };
