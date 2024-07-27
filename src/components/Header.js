@@ -27,18 +27,7 @@ const Header = ({ logo }) => {
           <li className="nav-item">
             <Link className="nav-link" to="myattendence">My Attendence</Link>
           </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="#">SAC-CLUBS</Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="#">ABOUT KLU</Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="#">TULIP HOSTEL</Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="#">TRANSOPRATION</Link>
-          </li>
+          
 
         </ul>
       </div>
