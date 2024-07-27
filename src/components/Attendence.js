@@ -1,11 +1,14 @@
-import React from 'react'
+import React from 'react';
 
-const Attendence = () => {
+// Updated Attendence component to receive props
+const Attendence = ({ hours, attendancePercentage }) => {
   return (
     <div>
-      <h1> you can check your Attendence</h1>
+      <h2>Attendance Information</h2>
+      <p><strong>Teaching Hours:</strong> {hours}</p>
+      <p><strong>Attendance Percentage:</strong> {attendancePercentage}%</p>
     </div>
-  )
-}
+  );
+};
 
-export default Attendence
+export default Attendence;

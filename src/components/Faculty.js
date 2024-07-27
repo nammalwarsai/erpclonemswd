@@ -1,5 +1,7 @@
 import React from 'react';
+import Attendence from './Attendence';
 
+// Updated faculty data to include hours and attendancePercentage
 const facultyData = [
   {
     id: 1,
@@ -11,6 +13,8 @@ const facultyData = [
     research: "Artificial Intelligence, Machine Learning",
     publications: "link_to_publications",
     officeHours: "Mon-Fri, 2:00 PM - 4:00 PM",
+    hours: "20", // Teaching hours per week
+    attendancePercentage: 85, // Attendance percentage
   },
   {
     id: 2,
@@ -22,6 +26,8 @@ const facultyData = [
     research: "Power Systems, Renewable Energy",
     publications: "link_to_publications",
     officeHours: "Mon-Fri, 3:00 PM - 5:00 PM",
+    hours: "18",
+    attendancePercentage: 90,
   },
   {
     id: 3,
@@ -33,6 +39,8 @@ const facultyData = [
     research: "Thermodynamics, Fluid Mechanics",
     publications: "link_to_publications",
     officeHours: "Mon-Fri, 11:00 AM - 1:00 PM",
+    hours: "22",
+    attendancePercentage: 88,
   },
   {
     id: 4,
@@ -44,6 +52,8 @@ const facultyData = [
     research: "Structural Engineering, Sustainable Construction",
     publications: "link_to_publications",
     officeHours: "Mon-Fri, 10:00 AM - 12:00 PM",
+    hours: "15",
+    attendancePercentage: 92,
   },
   {
     id: 5,
@@ -55,6 +65,8 @@ const facultyData = [
     research: "Wireless Communication, Signal Processing",
     publications: "link_to_publications",
     officeHours: "Mon-Fri, 4:00 PM - 6:00 PM",
+    hours: "19",
+    attendancePercentage: 87,
   }
 ];
 
@@ -62,7 +74,7 @@ function Faculty() {
   return (
     <div className="container mt-4" style={{ backgroundColor: 'blue', color: 'white', padding: '20px', borderRadius: '10px' }}>
       <h1 className="text-center mb-4" style={{ color: 'yellow' }}>Faculty Information</h1>
-      <h2 className="text-center mb-4" style={{ color: 'red' }}>MY FACULTY FOR THIS SEMISTER</h2>
+      <h2 className="text-center mb-4" style={{ color: 'red' }}>MY FACULTY FOR THIS SEMESTER</h2>
       <table className="table table-hover" style={{ backgroundColor: 'white', color: 'black' }}>
         <thead>
           <tr>
@@ -74,6 +86,7 @@ function Faculty() {
             <th scope="col">Research Interests</th>
             <th scope="col">Publications</th>
             <th scope="col">Office Hours</th>
+            <th scope="col">Attendance Info</th>
           </tr>
         </thead>
         <tbody>
@@ -91,6 +104,13 @@ function Faculty() {
                 <a href={faculty.publications} target="_blank" rel="noopener noreferrer">View Publications</a>
               </td>
               <td>{faculty.officeHours}</td>
+              {/* Integrate Attendence component */}
+              <td>
+                <Attendence
+                  hours={faculty.hours}
+                  attendancePercentage={faculty.attendancePercentage}
+                />
+              </td>
             </tr>
           ))}
         </tbody>
