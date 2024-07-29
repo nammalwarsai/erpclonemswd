@@ -87,7 +87,7 @@ const User = ({ name, type }) => {
             {[
               { name: 'KLU ERP', url: 'https://newerp.kluniversity.in/' },
               { name: 'KLU LMS', url: 'https://lms.kluniversity.in' },
-              { name: 'Official Website', url: 'https://www.kluniversity.in' },
+              { name: ' KLU Official Website', url: 'https://www.kluniversity.in' },
             ].map((link, index) => (
               <li key={index} style={styles.linkItem}>
                 <a
