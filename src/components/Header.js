@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBook, faUser, faCalendarAlt, faTasks, faCheckSquare } from '@fortawesome/free-solid-svg-icons';
+import { faBook, faUser, faCalendarAlt, faTasks, faCheckSquare, faCommentDots } from '@fortawesome/free-solid-svg-icons'; // Add faCommentDots
 
 const Header = ({ logo }) => {
   return (
@@ -9,7 +9,15 @@ const Header = ({ logo }) => {
       <a className="navbar-brand" href="https://www.kluniversity.in/">
         <img src={logo} alt="KL Logo" style={{ width: '150px' }} />
       </a>
-      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button
+        className="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
         <span className="navbar-toggler-icon"></span>
       </button>
       <div className="collapse navbar-collapse" id="navbarNav">
@@ -42,6 +50,12 @@ const Header = ({ logo }) => {
             <Link className="nav-link" to="/myattendence">
               <FontAwesomeIcon icon={faCheckSquare} className="mr-2" />
               My Attendence
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/feedbacksection">
+              <FontAwesomeIcon icon={faCommentDots} className="mr-2" /> {/* Updated icon */}
+              Feedback Section
             </Link>
           </li>
         </ul>
