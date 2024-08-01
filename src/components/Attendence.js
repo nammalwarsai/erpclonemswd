@@ -1,6 +1,5 @@
 import React from 'react';
 
-// Updated Attendence component to receive props
 const Attendence = ({ hours, attendancePercentage }) => {
   return (
     <div>
