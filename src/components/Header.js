@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBook, faUser, faCalendarAlt, faTasks, faCheckSquare, faCommentDots } from '@fortawesome/free-solid-svg-icons'; // Add faCommentDots
+import { faBook, faUser, faCalendarAlt, faTasks, faCheckSquare, faCommentDots, faCreditCard } from '@fortawesome/free-solid-svg-icons'; // Add faCreditCard
 
 const Header = ({ logo }) => {
   return (
@@ -56,6 +56,12 @@ const Header = ({ logo }) => {
             <Link className="nav-link" to="/feedbacksection">
               <FontAwesomeIcon icon={faCommentDots} className="mr-2" /> {/* Updated icon */}
               Feedback Section
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/Paymentsection">
+              <FontAwesomeIcon icon={faCreditCard} className="mr-2" /> {/* Updated icon */}
+              PAYMENT SECTION
             </Link>
           </li>
         </ul>

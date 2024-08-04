@@ -13,7 +13,10 @@ import Timetable from './components/Timetable';
 import Assignments from './components/Assignments';
 import Attendence from './components/Attendence';
 import Feedbacksection from './components/Feedbacksection';
-
+import Paymentsection from './components/Paymentsection';
+import Paymentsdone from './components/Paymentsdone';
+import MySemFeeStructure from './components/MySemFeeStructure'; // Import your components
+import PayFee from './components/PayFee';
 
 function App() {
   return (
@@ -24,15 +27,17 @@ function App() {
           <Route path="/" element={<User name="KURAPATI RAJA SAI NAMMALWAR--2300033899" type="student" />} />
           <Route path="/faculty" element={<Faculty />} />
           <Route path="/courses" element={<Courses />} />
-          <Route path="/timetable" element={<Timetable/>} />
-          <Route path="/myassignments" element={<Assignments/>} />
-          <Route path="/myattendence" element={<Attendence/>} />
-          <Route path="/feedbacksection" element={<Feedbacksection/>} />
-
+          <Route path="/timetable" element={<Timetable />} />
+          <Route path="/myassignments" element={<Assignments />} />
+          <Route path="/myattendence" element={<Attendence />} />
+          <Route path="/feedbacksection" element={<Feedbacksection />} />
+          <Route path="/Paymentsection" element={<Paymentsection />} />
+          <Route path="/Paymentsection/Paymentsdone" element={<Paymentsdone />} />
+          <Route path="/Paymentsection/MySemFeeStructure" element={<MySemFeeStructure />} />
+          <Route path="/Paymentsection/PayFee" element={<PayFee />} />
         </Routes>
       </div>
     </Router>
-    
   );
 }
 
