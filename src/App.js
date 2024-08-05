@@ -10,7 +10,6 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import Timetable from './components/Timetable';
-import Assignments from './components/Assignments';
 import Attendence from './components/Attendence';
 import Feedbacksection from './components/Feedbacksection';
 import Paymentsection from './components/Paymentsection';
@@ -28,7 +27,6 @@ function App() {
           <Route path="/faculty" element={<Faculty />} />
           <Route path="/courses" element={<Courses />} />
           <Route path="/timetable" element={<Timetable />} />
-          <Route path="/myassignments" element={<Assignments />} />
           <Route path="/myattendence" element={<Attendence />} />
           <Route path="/feedbacksection" element={<Feedbacksection />} />
           <Route path="/Paymentsection" element={<Paymentsection />} />

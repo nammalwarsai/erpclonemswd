@@ -18,7 +18,7 @@ const Paymentsection = () => {
     borderRadius: '5px',
     backgroundColor: isHovered ? '#d9534f' : 'blue',
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-    transition: 'all 0.3s ease',
+    transition: 'all 0.3s ease', 
     transform: isHovered ? 'scale(1.05)' : 'scale(1)',
   };
 

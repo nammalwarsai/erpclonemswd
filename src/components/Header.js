@@ -21,7 +21,7 @@ const Header = ({ logo }) => {
         <span className="navbar-toggler-icon"></span>
       </button>
       <div className="collapse navbar-collapse" id="navbarNav">
-        <ul className="navbar-nav">
+        <ul className="navbar-nav mr-auto">
           <li className="nav-item">
             <Link className="nav-link" to="/courses">
               <FontAwesomeIcon icon={faBook} className="mr-2" />
@@ -40,12 +40,7 @@ const Header = ({ logo }) => {
               My Timetable
             </Link>
           </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/myassignments">
-              <FontAwesomeIcon icon={faTasks} className="mr-2" />
-              My Assignments
-            </Link>
-          </li>
+          
           <li className="nav-item">
             <Link className="nav-link" to="/myattendence">
               <FontAwesomeIcon icon={faCheckSquare} className="mr-2" />
@@ -54,21 +49,24 @@ const Header = ({ logo }) => {
           </li>
           <li className="nav-item">
             <Link className="nav-link" to="/feedbacksection">
-              <FontAwesomeIcon icon={faCommentDots} className="mr-2" /> {/* Updated icon */}
+              <FontAwesomeIcon icon={faCommentDots} className="mr-2" />
               Feedback Section
             </Link>
           </li>
           <li className="nav-item">
             <Link className="nav-link" to="/Paymentsection">
-              <FontAwesomeIcon icon={faCreditCard} className="mr-2" /> {/* Updated icon */}
+              <FontAwesomeIcon icon={faCreditCard} className="mr-2" />
               PAYMENT SECTION
             </Link>
           </li>
         </ul>
-      </div>
-      <div className="user-info ml-auto">
-        <span className="mr-3">ID:2300033899||</span>
-        <span>STUDENT OF KLU</span>
+        <div className="usercren">
+          <strong>
+          <span className="mr-lg-3">ID:2300033899 ||</span>
+          <span>STUDENT OF KLU</span>
+          </strong>
+          const 
+        </div>
       </div>
     </nav>
   );
