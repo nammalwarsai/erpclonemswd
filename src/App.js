@@ -1,3 +1,4 @@
+// src/App.js
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
@@ -14,8 +15,9 @@ import Attendence from './components/Attendence';
 import Feedbacksection from './components/Feedbacksection';
 import Paymentsection from './components/Paymentsection';
 import Paymentsdone from './components/Paymentsdone';
-import MySemFeeStructure from './components/MySemFeeStructure'; // Import your components
+import MySemFeeStructure from './components/MySemFeeStructure'; 
 import PayFee from './components/PayFee';
+import MERNTASK from './components/MERNTASK'; // Ensure the case matches the filename
 
 function App() {
   return (
@@ -33,6 +35,7 @@ function App() {
           <Route path="/Paymentsection/Paymentsdone" element={<Paymentsdone />} />
           <Route path="/Paymentsection/MySemFeeStructure" element={<MySemFeeStructure />} />
           <Route path="/Paymentsection/PayFee" element={<PayFee />} />
+          <Route path="/MERNTASK" element={<MERNTASK />} /> {/* Ensure leading slash is present */}
         </Routes>
       </div>
     </Router>

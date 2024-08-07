@@ -59,6 +59,12 @@ const Header = ({ logo }) => {
               PAYMENT SECTION
             </Link>
           </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/MERNTASK">
+            <FontAwesomeIcon icon={faCheckSquare} className="mr-2" />
+            MARK-Attendance
+            </Link>
+          </li>
         </ul>
         <div className="usercren">
           <strong>
