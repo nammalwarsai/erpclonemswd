@@ -3,12 +3,11 @@ import React from 'react';
 const Attendence = ({ hours, attendancePercentage }) => {
   return (
     <div>
-      <h1 className='h1main'>YOU CAN CHECK YOUR SUBJECT ATTENDENCE HERE</h1>
       <table class="table table-hover">
   <thead>
     <tr>
       <th scope="col">COURSE NAME</th>
-      <th scope="col">TOTAL ATTENDENCE(INCLUDING ALL COMPONENTS)</th>
+      <th scope="col">TOTAL ATTENDENCE</th>
       
     </tr>
   </thead>

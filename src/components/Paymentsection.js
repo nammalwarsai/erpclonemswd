@@ -32,13 +32,13 @@ const Paymentsection = () => {
         WELCOME TO KL UNIVERSITY PAYMENT SECTION
       </h1>
       <div className="d-flex flex-column align-items-center mt-4">
-        <Link to="/Paymentsection/Paymentsdone" className="btn btn-primary mb-3">
+        <Link to="/Paymentsection/Paymentsdone" className="btn btn-primary mb-2">
           Payments Done
         </Link>
-        <Link to="/Paymentsection/MySemFeeStructure" className="btn btn-secondary mb-3">
+        <Link to="/Paymentsection/MySemFeeStructure" className="btn btn-secondary mb-2">
           My Sem Fee Structure
         </Link>
-        <Link to="/Paymentsection/PayFee" className="btn btn-success mb-3">
+        <Link to="/Paymentsection/PayFee" className="btn btn-success mb-2">
           Pay Fee
         </Link>
       </div>

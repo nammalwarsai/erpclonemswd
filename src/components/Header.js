@@ -65,7 +65,6 @@ const Header = ({ logo }) => {
           <span className="mr-lg-3">ID:2300033899 ||</span>
           <span>STUDENT OF KLU</span>
           </strong>
-          const 
         </div>
       </div>
     </nav>
