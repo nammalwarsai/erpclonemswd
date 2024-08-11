@@ -107,7 +107,7 @@ const FeedbackSection = () => {
           </tr>
           <tr>
             <td colSpan="2">
-              <button onClick={handleSubmit} style={{ color: 'red', backgroundColor: 'green' }}>
+              <button onClick={handleSubmit} style={{ color: 'black', backgroundColor: 'yellow' }}>
                 Submit Feedback
               </button>
             </td>
