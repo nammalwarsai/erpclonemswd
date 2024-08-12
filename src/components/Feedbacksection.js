@@ -86,10 +86,10 @@ const FeedbackSection = () => {
                 onChange={(e) => setCommunicationSkills(e.target.value)}
               >
                 <option value="">Select an option</option>
-                <option value="Very Good">Very Good</option>
-                <option value="Good">Good</option>
-                <option value="Bad">Bad</option>
-                <option value="Very Bad">Very Bad</option>
+                <option value="Very Good">EXCELLENT</option>
+                <option value="Good">GOOD</option>
+                <option value="Bad">BAD</option>
+                <option value="Very Bad">WORST</option>
               </select>
             </td>
           </tr>
@@ -116,7 +116,7 @@ const FeedbackSection = () => {
       </table>
 
       {feedbacks.length > 0 && (
-        <div style={{ marginTop: '20px' }}>
+        <div style={{ marginTop: '10px' }}>
           <h2>Received Feedbacks</h2>
           <table
             border="1"
