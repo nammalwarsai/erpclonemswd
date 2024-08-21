@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBook, faUser, faCalendarAlt, faTasks, faCheckSquare, faCommentDots, faCreditCard } from '@fortawesome/free-solid-svg-icons'; // Add faCreditCard
+import { faBook, faUser, faCalendarAlt, faTasks, faCheckSquare, faCommentDots, faCreditCard } from '@fortawesome/free-solid-svg-icons'; 
 
 const Header = ({ logo }) => {
   return (
@@ -65,8 +65,9 @@ const Header = ({ logo }) => {
             MARK-Attendance
             </Link>
           </li>
+          
         </ul>
-        <div className="usercren">
+        <div className="nav-item">
           <strong>
           <span className="mr-lg-3">ID:2300033899 ||</span>
           <span>STUDENT OF KLU</span>

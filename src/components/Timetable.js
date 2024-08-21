@@ -1,9 +1,8 @@
 import React from 'react'
-
 const Timetable = () => {
   return (
     <div>
-      <h1>TIMETABLE FOR ODD SEM (2024-2025)</h1>
+      <h1>TIMETABLE OF ODD FOR SEM Y-23</h1>
       <table className="table table-hover">
         <thead>
           <tr>
