@@ -58,7 +58,7 @@ const Paymentsdone = () => {
       {payments.length > 0 ? (
         <div>
           <h2 className="text-center">
-            YOUR TOTAL PAYMENTS DONE <strong>₹{totalAmount}</strong>
+            TOTAL PAYMENTS TO KL UNIVERSITY <strong>₹{totalAmount}</strong>
           </h2>
           <div className="mt-4">
             <h4>Payment Details:</h4>
