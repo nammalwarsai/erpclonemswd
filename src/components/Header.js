@@ -40,11 +40,10 @@ const Header = ({ logo }) => {
               My Timetable
             </Link>
           </li>
-          
           <li className="nav-item">
             <Link className="nav-link" to="/myattendence">
               <FontAwesomeIcon icon={faCheckSquare} className="mr-2" />
-              My Attendence
+              My Attendance
             </Link>
           </li>
           <li className="nav-item">
@@ -56,21 +55,20 @@ const Header = ({ logo }) => {
           <li className="nav-item">
             <Link className="nav-link" to="/Paymentsection">
               <FontAwesomeIcon icon={faCreditCard} className="mr-2" />
-              PAYMENT SECTION
+              Payment Section
             </Link>
           </li>
           <li className="nav-item">
             <Link className="nav-link" to="/MERNTASK">
-            <FontAwesomeIcon icon={faCheckSquare} className="mr-2" />
-            MARK-Attendance
+              <FontAwesomeIcon icon={faCheckSquare} className="mr-2" />
+              Mark-Attendance
             </Link>
           </li>
-          
         </ul>
-        <div className="nav-item">
+        <div className="navbar-text ml-auto d-none d-lg-block">
           <strong>
-          <span className="mr-lg-3">ID:2300033899 ||</span>
-          <span>STUDENT OF KLU</span>
+            <span className="mr-lg-3">ID:2300033899 ||</span>
+            <span>STUDENT OF KLU</span>
           </strong>
         </div>
       </div>
