@@ -12,11 +12,11 @@ code {
     monospace;
 }
 .mainhe{
-  color: rgb(0, 0, 0);
-  background-color: rgb(245, 239, 239);
+  color: rgb(233, 246, 0);
+  background-color: rgb(241, 0, 0);
   text-decoration: underline;
   padding:34px;
-  text-align:center;
+  text-align:left;
   background-image: url(https://www.kluniversity.in/images/klulogo3.png);
   cursor:zoom-in;
 }
