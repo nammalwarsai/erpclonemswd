@@ -17,7 +17,7 @@ import Paymentsection from './components/Paymentsection';
 import Paymentsdone from './components/Paymentsdone';
 import MySemFeeStructure from './components/MySemFeeStructure'; 
 import PayFee from './components/PayFee';
-import MERNTASK from './components/MERNTASK'; // Ensure the case matches the filename
+import MERNTASK from './components/MERNTASK'; 
 
 function App() {
   return (
