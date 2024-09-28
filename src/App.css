@@ -8,16 +8,16 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: #00cefc;
+  background-color: #f9feff;
 }
   .h1inCourses{
     font-size: 2.5rem; /* Adjust the font size */
-    color: #0e9ce3; /* Adjust the text color */
+    color: #f3f6f7; /* Adjust the text color */
     padding: 10px;;
     text-align: center; /* Center align the text */
     margin: 20px 0; /* Add some margin */
     font-family: 'Arial', sans-serif; /* Set the font family */
-    background-color: #8fcee0;
+    background-color: #ffffff;
   }
 
 .footerdiv{
@@ -70,7 +70,7 @@ body {
 
 .h1inCourses {
   color: red;
-  background-color: blue;
+  background-color: rgb(255, 255, 255);
   padding: 10px;
   text-align: center;
   border-radius: 5px;

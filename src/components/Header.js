@@ -64,6 +64,7 @@ const Header = ({ logo }) => {
               Mark-Attendance
             </Link>
           </li>
+          
         </ul>
         <div className="navbar-text ml-auto d-none d-lg-block">
           <strong>

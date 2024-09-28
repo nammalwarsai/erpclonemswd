@@ -1,5 +1,4 @@
 import React from 'react';
-import Attendence from './Attendence';
 
 // Updated faculty data to include hours and attendancePercentage
 const facultyData = [
@@ -86,7 +85,6 @@ function Faculty() {
             <th scope="col">Research Interests</th>
             <th scope="col">Publications</th>
             <th scope="col">Office Hours</th>
-            <th scope="col">Attendance Info</th>
           </tr>
         </thead>
         <tbody>
@@ -104,13 +102,6 @@ function Faculty() {
                 <a href={faculty.publications} target="_blank" rel="noopener noreferrer">View Publications</a>
               </td>
               <td>{faculty.officeHours}</td>
-              {/* Integrate Attendence component */}
-              <td>
-                <Attendence
-                  hours={faculty.hours}
-                  attendancePercentage={faculty.attendancePercentage}
-                />
-              </td>
             </tr>
           ))}
         </tbody>
