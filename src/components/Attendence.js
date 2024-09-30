@@ -80,26 +80,27 @@ const Attendance = () => {
             <Card
               variant="outlined"
               style={{
-                borderColor: 'green',
-                borderWidth: '5px',
+                borderColor: '#5cd65c', 
+                borderWidth: '3px',
                 borderStyle: 'solid',
                 width: '280px',
                 height: '280px',
                 position: 'relative',
                 overflow: 'hidden',
-                backgroundImage: hoveredIndex === index ? `url(${tip.imageUrl})` : 'none',
+                backgroundImage: `url(${tip.imageUrl})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
-                color: hoveredIndex === index ? 'transparent' : 'black',
+                filter: hoveredIndex === index ? 'none' : 'grayscale(70%)', // Grey out when not hovered
+                opacity: hoveredIndex === index ? 1 : 0.5, // Partially visible when not hovered
                 cursor: 'pointer',
                 boxShadow: hoveredIndex === index ? '0px 4px 20px rgba(0, 128, 0, 0.7)' : 'none',
-                transition: 'box-shadow 0.3s ease-in-out',
+                transition: 'filter 0.3s ease-in-out, opacity 0.3s ease-in-out, box-shadow 0.3s ease-in-out',
               }}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
-              <CardContent style={{ height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-                <Typography variant="h6" component="div" style={{ opacity: hoveredIndex === index ? 0 : 1 }}>
+              <CardContent style={{ height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', backgroundColor: hoveredIndex === index ? 'rgba(255, 255, 255, 0)' : 'rgba(255, 255, 255, 0.7)' }}>
+                <Typography variant="h6" component="div" style={{ opacity: hoveredIndex === index ? 1 : 0.7 }}>
                   {tip.title}
                 </Typography>
                 <CardActions style={{ position: 'absolute', bottom: 10, left: 10 }}>
