@@ -16,10 +16,8 @@ const FeedbackSection = () => {
         remarks,
       };
 
-      // Add the new feedback to the list of feedbacks
       setFeedbacks([...feedbacks, newFeedback]);
 
-      // Clear the form
       setCourseName('');
       setInstructorName('');
       setCommunicationSkills('');

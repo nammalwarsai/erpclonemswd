@@ -68,8 +68,7 @@ const Header = ({ logo }) => {
         </ul>
         <div className="navbar-text ml-auto d-none d-lg-block">
           <strong>
-            <span className="mr-lg-3">ID:2300033899 ||</span>
-            <span>STUDENT OF KLU</span>
+            <span className="mr-lg-3">ID:2300033899</span>
           </strong>
         </div>
       </div>

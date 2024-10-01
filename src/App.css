@@ -1,59 +1,60 @@
 .maindiv {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100vh; /* Ensure the background covers the full viewport height */
-  }
-.header{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+}
+
+.header {
   align-items: center;
   justify-content: center;
   text-align: center;
   background-color: #f9feff;
 }
-  .h1inCourses{
-    font-size: 2.5rem; /* Adjust the font size */
-    color: #f3f6f7; /* Adjust the text color */
-    padding: 10px;;
-    text-align: center; /* Center align the text */
-    margin: 20px 0; /* Add some margin */
-    font-family: 'Arial', sans-serif; /* Set the font family */
-    background-color: #ffffff;
-  }
 
-.footerdiv{
-  background-color: #ff0000;  /* Background color */
-  border: 5px solid #1ed318;     /* Border with color */
-  border-radius: 5px;         /* Rounded corners */
-  padding: 20px;              /* Padding inside the div */
-  margin: 20px;               /* Margin outside the div */
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect */
-  width: 300px;               /* Width of the div */
-  height: 200px;              /* Height of the div */
-  text-align: center;         /* Center text alignment */
-  font-family: Arial, sans-serif; 
-  justify-content: center;/* Font family */
+.h1inCourses {
+  font-size: 2.5rem;
+  color: #f3f6f7;
+  padding: 10px;
+  text-align: center;
+  margin: 20px 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #ffffff;
 }
 
-/* Hover Effect */
-.footerdiv :hover{
-  background-color: #ea2e2e;  /* Change background on hover */
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+.footerdiv {
+  background-color: #ff0000;
+  border: 5px solid #1ed318;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  height: 200px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  justify-content: center;
 }
 
-/* Responsive Design */
+.footerdiv:hover {
+  background-color: #ea2e2e;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
 @media (max-width: 600px) {
   div {
-      width: 100%;            /* Full width on small screens */
-      height: auto;           /* Auto height on small screens */
+    width: 100%;
+    height: auto;
   }
 }
-.h1inhead{
+
+.h1inhead {
   background-color: #1ed318;
 }
-.User{
+
+.User {
   text-align: center;
 }
-/* App.css */
 
 body {
   font-family: Arial, sans-serif;

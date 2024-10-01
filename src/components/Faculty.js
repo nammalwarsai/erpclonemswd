@@ -1,6 +1,5 @@
 import React from 'react';
 
-// Updated faculty data to include hours and attendancePercentage
 const facultyData = [
   {
     id: 1,
@@ -12,8 +11,8 @@ const facultyData = [
     research: "Artificial Intelligence, Machine Learning",
     publications: "link_to_publications",
     officeHours: "Mon-Fri, 2:00 PM - 4:00 PM",
-    hours: "20", // Teaching hours per week
-    attendancePercentage: 85, // Attendance percentage
+    hours: "20", 
+    attendancePercentage: 85,
   },
   {
     id: 2,

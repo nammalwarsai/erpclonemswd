@@ -1,7 +1,6 @@
 import React from 'react';
 
 const User = ({ name, type }) => {
-  // Define inline styles
   const styles = {
     container: {
       fontFamily: 'Arial, sans-serif',
@@ -57,7 +56,6 @@ const User = ({ name, type }) => {
     },
   };
 
-  // Custom hook to handle hover state
   const [hoveredLink, setHoveredLink] = React.useState(null);
 
   const handleMouseEnter = (index) => {

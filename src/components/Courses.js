@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 const Courses = () => {
-  // Updated list of courses
   const [courses, setCourses] = useState([
     {
       name: "DAA",

@@ -9,7 +9,7 @@ import {
   Modal,
   Box,
 } from '@mui/material';
-import 'bootstrap/dist/css/bootstrap.min.css'; // Ensure Bootstrap CSS is imported
+import 'bootstrap/dist/css/bootstrap.min.css'; 
 
 const tips = [
   {
@@ -90,8 +90,8 @@ const Attendance = () => {
                 backgroundImage: `url(${tip.imageUrl})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
-                filter: hoveredIndex === index ? 'none' : 'grayscale(70%)', // Grey out when not hovered
-                opacity: hoveredIndex === index ? 1 : 0.5, // Partially visible when not hovered
+                filter: hoveredIndex === index ? 'none' : 'grayscale(70%)', 
+                opacity: hoveredIndex === index ? 1 : 0.5, 
                 cursor: 'pointer',
                 boxShadow: hoveredIndex === index ? '0px 4px 20px rgba(0, 128, 0, 0.7)' : 'none',
                 transition: 'filter 0.3s ease-in-out, opacity 0.3s ease-in-out, box-shadow 0.3s ease-in-out',

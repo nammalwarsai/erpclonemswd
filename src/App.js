@@ -35,7 +35,7 @@ function App() {
           <Route path="/Paymentsection/Paymentsdone" element={<Paymentsdone />} />
           <Route path="/Paymentsection/MySemFeeStructure" element={<MySemFeeStructure />} />
           <Route path="/Paymentsection/PayFee" element={<PayFee />} />
-          <Route path="/MERNTASK" element={<MERNTASK />} /> {/* Ensure leading slash is present */}
+          <Route path="/MERNTASK" element={<MERNTASK />} /> 
         </Routes>
       </div>
     </Router>

@@ -17,7 +17,7 @@ const Timetable = () => {
       setIsSignUp((prev) => !prev);
       setFormData({ username: '', password: '', confirmPassword: '' });
       setShowForm(true);
-    },100); // Adjust the timeout to match the animation duration
+    },100); 
   };
 
   const handleChange = (e) => {
