@@ -2,7 +2,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
-import Footer from './components/Footer';
 import Faculty from './components/Faculty';
 import Courses from './components/Courses';
 import User from './components/User';
@@ -18,6 +17,7 @@ import Paymentsdone from './components/Paymentsdone';
 import MySemFeeStructure from './components/MySemFeeStructure'; 
 import PayFee from './components/PayFee';
 import MERNTASK from './components/MERNTASK'; 
+import HostelInfo from './components/HostelInfo'; // Import the new component
 
 function App() {
   return (
@@ -36,6 +36,7 @@ function App() {
           <Route path="/Paymentsection/MySemFeeStructure" element={<MySemFeeStructure />} />
           <Route path="/Paymentsection/PayFee" element={<PayFee />} />
           <Route path="/MERNTASK" element={<MERNTASK />} /> 
+          <Route path="/hostelinfo" element={<HostelInfo />} /> 
         </Routes>
       </div>
     </Router>

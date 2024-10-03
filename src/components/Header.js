@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBook, faUser, faCalendarAlt, faTasks, faCheckSquare, faCommentDots, faCreditCard } from '@fortawesome/free-solid-svg-icons'; 
+import { faBook, faUser, faCalendarAlt, faTasks, faCheckSquare, faCommentDots, faCreditCard, faHome } from '@fortawesome/free-solid-svg-icons'; 
 
 const Header = ({ logo }) => {
   return (
@@ -64,7 +64,13 @@ const Header = ({ logo }) => {
               Mark-Attendance
             </Link>
           </li>
-          
+          {/* Hostel Info link */}
+          <li className="nav-item">
+            <Link className="nav-link" to="/hostelinfo">
+              <FontAwesomeIcon icon={faHome} className="mr-2" />
+              Hostel Info
+            </Link>
+          </li>
         </ul>
         <div className="navbar-text ml-auto d-none d-lg-block">
           <strong>
