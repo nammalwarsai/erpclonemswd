@@ -4,11 +4,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Attendance = () => {
   const subjects = [
-    { name: 'Matched Visits', attendance: 92 },
-    { name: 'Semi', attendance: 85 },
-    { name: 'Biology', attendance: 88 },
+    { name: 'Physics', attendance: 92 },
+    { name: 'maths', attendance: 85 },
+    { name: 'chemistry', attendance: 88 },
     { name: 'Computer Science', attendance: 94 },
-    { name: 'Rogue', attendance: 79 },
+    { name: 'chess', attendance: 79 },
   ];
 
   return (

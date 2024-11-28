@@ -65,12 +65,20 @@ const Header = ({ logo }) => {
             </Link>
           </li>
           {/* Hostel Info link */}
+          
           <li className="nav-item">
-            <Link className="nav-link" to="/hostelinfo">
+            <Link className="nav-link" to="/login">
               <FontAwesomeIcon icon={faHome} className="mr-2" />
-              Hostel Info
+              Login/Logout
             </Link>
           </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/signup">
+              <FontAwesomeIcon icon={faHome} className="mr-2" />
+              Signup
+             </Link>
+          </li>
+
         </ul>
         <div className="navbar-text ml-auto d-none d-lg-block">
           <strong>

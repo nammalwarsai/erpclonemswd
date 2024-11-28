@@ -18,7 +18,8 @@ import MySemFeeStructure from './components/MySemFeeStructure';
 import PayFee from './components/PayFee';
 import MERNTASK from './components/MERNTASK'; 
 import HostelInfo from './components/HostelInfo'; // Import the new component
-
+import Signup from './components/Signup';
+import Login from './components/Login';
 function App() {
   return (
     <Router>
@@ -37,6 +38,9 @@ function App() {
           <Route path="/Paymentsection/PayFee" element={<PayFee />} />
           <Route path="/MERNTASK" element={<MERNTASK />} /> 
           <Route path="/hostelinfo" element={<HostelInfo />} /> 
+          <Route path="/login" element={<Login/>} /> 
+          <Route path="/signup" element={<Signup />} /> 
+
         </Routes>
       </div>
     </Router>

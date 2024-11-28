@@ -9,7 +9,6 @@ const facultyData = [
     email: "anitha.reddy@kluniversity.in",
     phone: "+91 9876543210",
     research: "Artificial Intelligence, Machine Learning",
-    publications: "link_to_publications",
     officeHours: "Mon-Fri, 2:00 PM - 4:00 PM",
     hours: "20", 
     attendancePercentage: 85,
@@ -22,7 +21,6 @@ const facultyData = [
     email: "ravi.kumar@kluniversity.in",
     phone: "+91 9876543211",
     research: "Power Systems, Renewable Energy",
-    publications: "link_to_publications",
     officeHours: "Mon-Fri, 3:00 PM - 5:00 PM",
     hours: "18",
     attendancePercentage: 90,
@@ -35,7 +33,6 @@ const facultyData = [
     email: "sangeetha.menon@kluniversity.in",
     phone: "+91 9876543212",
     research: "Thermodynamics, Fluid Mechanics",
-    publications: "link_to_publications",
     officeHours: "Mon-Fri, 11:00 AM - 1:00 PM",
     hours: "22",
     attendancePercentage: 88,
@@ -48,7 +45,6 @@ const facultyData = [
     email: "rajesh.sharma@kluniversity.in",
     phone: "+91 9876543213",
     research: "Structural Engineering, Sustainable Construction",
-    publications: "link_to_publications",
     officeHours: "Mon-Fri, 10:00 AM - 12:00 PM",
     hours: "15",
     attendancePercentage: 92,
@@ -61,7 +57,6 @@ const facultyData = [
     email: "priya.nair@kluniversity.in",
     phone: "+91 9876543214",
     research: "Wireless Communication, Signal Processing",
-    publications: "link_to_publications",
     officeHours: "Mon-Fri, 4:00 PM - 6:00 PM",
     hours: "19",
     attendancePercentage: 87,
@@ -70,41 +65,40 @@ const facultyData = [
 
 function Faculty() {
   return (
-    <div className="container mt-4" style={{ backgroundColor: 'blue', color: 'white', padding: '20px', borderRadius: '10px' }}>
-      <h1 className="text-center mb-4" style={{ color: 'yellow' }}>Faculty Information</h1>
-      <h2 className="text-center mb-4" style={{ color: 'red' }}>MY FACULTY FOR THIS SEMESTER</h2>
-      <table className="table table-hover" style={{ backgroundColor: 'white', color: 'black' }}>
-        <thead>
-          <tr>
-            <th scope="col">S.NO</th>
-            <th scope="col">Name Of the Faculty</th>
-            <th scope="col">Department</th>
-            <th scope="col">Faculty ID</th>
-            <th scope="col">Contact</th>
-            <th scope="col">Research Interests</th>
-            <th scope="col">Publications</th>
-            <th scope="col">Office Hours</th>
-          </tr>
-        </thead>
-        <tbody>
-          {facultyData.map((faculty, index) => (
-            <tr key={faculty.id}>
-              <th scope="row">{index + 1}</th>
-              <td>{faculty.name}</td>
-              <td>{faculty.department}</td>
-              <td>{faculty.facultyId}</td>
-              <td>
-                {faculty.email}<br />{faculty.phone}
-              </td>
-              <td>{faculty.research}</td>
-              <td>
-                <a href={faculty.publications} target="_blank" rel="noopener noreferrer">View Publications</a>
-              </td>
-              <td>{faculty.officeHours}</td>
+    <div className="container mt-4 p-4 rounded shadow-lg" style={{ backgroundColor: '#f8f9fa' }}>
+      <h1 className="text-center text-primary mb-4">Faculty Information</h1>
+      <h2 className="text-center text-danger mb-4">MY FACULTY FOR THIS SEMESTER</h2>
+      <div className="table-responsive">
+        <table className="table table-striped table-bordered table-hover">
+          <thead className="thead-dark">
+            <tr>
+              <th scope="col">S.NO</th>
+              <th scope="col">Name Of the Faculty</th>
+              <th scope="col">Department</th>
+              <th scope="col">Faculty ID</th>
+              <th scope="col">Contact</th>
+              <th scope="col">Research Interests</th>
+              <th scope="col">Office Hours</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {facultyData.map((faculty, index) => (
+              <tr key={faculty.id}>
+                <th scope="row">{index + 1}</th>
+                <td>{faculty.name}</td>
+                <td>{faculty.department}</td>
+                <td>{faculty.facultyId}</td>
+                <td>
+                  <strong>Email:</strong> {faculty.email}<br />
+                  <strong>Phone:</strong> {faculty.phone}
+                </td>
+                <td>{faculty.research}</td>
+                <td>{faculty.officeHours}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }
