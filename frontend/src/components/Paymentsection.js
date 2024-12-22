@@ -1,46 +1,63 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { FaMoneyBillWave, FaHistory, FaFileInvoiceDollar } from 'react-icons/fa';
 
 const Paymentsection = () => {
-  const [isHovered, setIsHovered] = useState(false);
+  const [activeCard, setActiveCard] = useState(null);
 
-  const headingStyle = {
-    color: isHovered ? 'green' : 'red',
-    fontSize: '2.5rem',
-    fontWeight: '700',
-    marginBottom: '3rem',
-    textAlign: 'center',
-    textTransform: 'uppercase',
-    letterSpacing: '1.5px',
-    lineHeight: '1.3',
-    textShadow: isHovered ? '2px 20px 60px rgba(0, 0, 0, 0.3)' : '2px 2px 4px rgba(0, 0, 0, 0.2)',
-    padding: '1rem',
-    borderRadius: '5px',
-    backgroundColor: isHovered ? '#d9534f' : 'blue',
-    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-    transition: 'all 0.3s ease', 
-    transform: isHovered ? 'scale(1.05)' : 'scale(1)',
-  };
+  const cards = [
+    {
+      title: 'Payments Done',
+      icon: <FaHistory size={40} />,
+      path: '/Paymentsection/Paymentsdone',
+      color: '#4CAF50'
+    },
+    {
+      title: 'Pay Fee',
+      icon: <FaMoneyBillWave size={40} />,
+      path: '/Paymentsection/PayFee',
+      color: '#2196F3'
+    },
+    {
+      title: 'Fee Structure',
+      icon: <FaFileInvoiceDollar size={40} />,
+      path: '/Paymentsection/MySemFeeStructure',
+      color: '#FF9800'
+    }
+  ];
 
   return (
-    <div className="container text-center mt-5">
-      <h1
-        style={headingStyle}
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-      >
-        WELCOME TO PAYMENT SECTION
-      </h1>
-      <div className="d-flex flex-column align-items-center mt-4">
-        <Link to="/Paymentsection/Paymentsdone" className="btn btn-success mb-2">
-          Payments Done
-        </Link>
-        <Link to="/Paymentsection/MySemFeeStructure" className="btn btn-success mb-2">
-          My Sem Fee Structure
-        </Link>
-        <Link to="/Paymentsection/PayFee" className="btn btn-success mb-2">
-          Pay Fee
-        </Link>
+    <div className="container py-5">
+      <h1 className="text-center mb-5" style={{
+        fontSize: '2.5rem',
+        color: '#1a237e',
+        textTransform: 'uppercase',
+        letterSpacing: '2px'
+      }}>Payment Portal</h1>
+      
+      <div className="row justify-content-center g-4">
+        {cards.map((card, index) => (
+          <div className="col-md-4 col-sm-6" key={index}>
+            <Link to={card.path} className="text-decoration-none">
+              <div
+                className="card h-100"
+                style={{
+                  transform: activeCard === index ? 'translateY(-10px)' : 'none',
+                  transition: 'all 0.3s ease',
+                  cursor: 'pointer',
+                  boxShadow: '0 4px 8px rgba(0,0,0,0.1)'
+                }}
+                onMouseEnter={() => setActiveCard(index)}
+                onMouseLeave={() => setActiveCard(null)}
+              >
+                <div className="card-body text-center p-4">
+                  <div style={{ color: card.color }}>{card.icon}</div>
+                  <h3 className="card-title mt-3" style={{ color: '#333' }}>{card.title}</h3>
+                </div>
+              </div>
+            </Link>
+          </div>
+        ))}
       </div>
     </div>
   );

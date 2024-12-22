@@ -3,7 +3,6 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const dotenv = require('dotenv');
-const authRoutes = require('./routes/authRoutes'); // Import your authentication routes
 
 // Load environment variables from .env file
 dotenv.config();
@@ -15,9 +14,6 @@ const app = express();
 app.use(cors());  // Enable Cross-Origin Resource Sharing
 app.use(bodyParser.json());  // Parse incoming JSON data
 
-// Routes
-app.use('/api/auth', authRoutes);  // Use the auth routes for handling authentication
-
 // MongoDB Connection
 mongoose.connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
@@ -26,8 +22,43 @@ mongoose.connect(process.env.MONGO_URI, {
 .then(() => console.log('MongoDB connected successfully'))
 .catch((err) => console.error('MongoDB connection error:', err));
 
+// Define a simple schema and model for your data
+const attendanceSchema = new mongoose.Schema({
+  subject: String,
+  attendance: Number,
+});
+
+const Attendance = mongoose.model('Attendance', attendanceSchema);
+
+// Sample Data to Insert
+const sampleAttendanceData = [
+  { subject: 'Physics', attendance: 92 },
+  { subject: 'Maths', attendance: 85 },
+  { subject: 'Chemistry', attendance: 88 },
+  { subject: 'Computer Science', attendance: 94 },
+  { subject: 'Chess', attendance: 79 },
+];
+
+// Insert sample data into MongoDB
+const insertData = async () => {
+  try {
+    await Attendance.insertMany(sampleAttendanceData);
+    console.log('Sample attendance data inserted');
+  } catch (err) {
+    console.error('Error inserting data:', err);
+  }
+};
+
+// Call insertData on server start
+insertData();
+
+// Define a route for the root URL
+app.get('/', (req, res) => {
+  res.send('Welcome to the Attendance API!');
+});
+
 // Start the server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
+  console.log(`Server is running on http://localhost:${PORT}`);
 });

@@ -1,21 +1,32 @@
-import React from 'react';
-import { Container, Table } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Container, Table, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Attendance = () => {
-  const subjects = [
-    { name: 'Physics', attendance: 92 },
-    { name: 'maths', attendance: 85 },
-    { name: 'chemistry', attendance: 88 },
-    { name: 'Computer Science', attendance: 94 },
-    { name: 'chess', attendance: 79 },
-  ];
+  const [attendanceData, setAttendanceData] = useState([]);
+  
+  const fetchAttendance = async () => {
+    try {
+      const response = await fetch('/api/attendance');
+      const data = await response.json();
+      setAttendanceData(data);
+    } catch (error) {
+      console.error('Error fetching attendance data:', error);
+    }
+  };
 
   return (
     <Container className="mt-5">
       <h1 className="text-center mb-4" style={{ color: 'green', fontWeight: 'bold' }}>
         Attendance Report
       </h1>
+      <Button 
+        className="mb-4" 
+        variant="primary" 
+        onClick={fetchAttendance}
+      >
+        See Attendance
+      </Button>
       <Table bordered hover className="text-center" style={{ maxWidth: '600px', margin: '0 auto' }}>
         <thead className="table-success">
           <tr>
@@ -24,7 +35,7 @@ const Attendance = () => {
           </tr>
         </thead>
         <tbody>
-          {subjects.map((subject, index) => (
+          {attendanceData.map((subject, index) => (
             <tr key={index}>
               <td style={{ fontWeight: 'bold' }}>{subject.name}</td>
               <td>{subject.attendance}%</td>

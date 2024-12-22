@@ -1,10 +1,15 @@
 import React, { useState, useEffect } from 'react';
+import { FaSearch, FaFilePdf } from 'react-icons/fa';
+import jsPDF from 'jspdf';
+import 'jspdf-autotable';
 
 const Paymentsdone = () => {
   const [payments, setPayments] = useState([]);
   const [totalAmount, setTotalAmount] = useState(0);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [sortOrder, setSortOrder] = useState('desc');
 
   const fetchPayments = async () => {
     try {
@@ -35,6 +40,49 @@ const Paymentsdone = () => {
     fetchPayments();
   }, []);
 
+  const filteredPayments = payments.filter(payment =>
+    payment.date.includes(searchTerm) || 
+    payment.amount.includes(searchTerm)
+  );
+
+  const sortedPayments = [...filteredPayments].sort((a, b) => {
+    return sortOrder === 'desc' 
+      ? new Date(b.date) - new Date(a.date)
+      : new Date(a.date) - new Date(b.date);
+  });
+
+  const exportToPDF = () => {
+    const doc = new jsPDF();
+    
+    // Add title to the PDF
+    doc.setFontSize(20);
+    doc.text('Payment History Report', 14, 15);
+    doc.setFontSize(12);
+    doc.text(`Total Amount Paid: ₹${totalAmount}`, 14, 25);
+    doc.text(`Generated on: ${new Date().toLocaleDateString()}`, 14, 35);
+
+    // Prepare the data for the table
+    const tableData = sortedPayments.map(payment => [
+      `#${payment.id}`,
+      `₹${payment.amount}`,
+      new Date(payment.date).toLocaleDateString(),
+      'Completed'
+    ]);
+
+    // Add the table to the PDF
+    doc.autoTable({
+      startY: 40,
+      head: [['Payment ID', 'Amount', 'Date', 'Status']],
+      body: tableData,
+      theme: 'grid',
+      headStyles: { fillColor: [33, 150, 243] },
+      styles: { fontSize: 10 }
+    });
+
+    // Save the PDF
+    doc.save('payment-history.pdf');
+  };
+
   if (loading) {
     return (
       <div className="container text-center mt-7">
@@ -52,28 +100,62 @@ const Paymentsdone = () => {
   }
 
   return (
-    <div className="container mt-7">
-      <h1 className="text-center">Total Payments Done</h1>
-      <br />
-      {payments.length > 0 ? (
-        <div>
-          <h2 className="text-center">
-            TOTAL PAYMENTS TO KL UNIVERSITY <strong>₹{totalAmount}</strong>
-          </h2>
-          <div className="mt-4">
-            <h4>Payment Details:</h4>
-            <ul className="list-group">
-              {payments.map((payment) => (
-                <li key={payment.id} className="list-group-item">
-                  Payment ID: {payment.id} | Amount: ₹{payment.amount} | Date: {payment.date}
-                </li>
-              ))}
-            </ul>
+    <div className="container mt-4">
+      <div className="card shadow-sm">
+        <div className="card-body">
+          <h2 className="card-title text-center mb-4">Payment History</h2>
+          
+          <div className="row mb-4">
+            <div className="col-md-6">
+              <div className="input-group">
+                <span className="input-group-text">
+                  <FaSearch />
+                </span>
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="Search payments..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                />
+              </div>
+            </div>
+            <div className="col-md-6 text-end">
+              <button 
+                className="btn btn-outline-primary"
+                onClick={exportToPDF}
+              >
+                <FaFilePdf /> Export PDF
+              </button>
+            </div>
+          </div>
+
+          <div className="table-responsive">
+            <table className="table table-hover">
+              <thead className="table-light">
+                <tr>
+                  <th>Payment ID</th>
+                  <th>Amount</th>
+                  <th>Date</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                {sortedPayments.map(payment => (
+                  <tr key={payment.id}>
+                    <td>#{payment.id}</td>
+                    <td>₹{payment.amount}</td>
+                    <td>{new Date(payment.date).toLocaleDateString()}</td>
+                    <td>
+                      <span className="badge bg-success">Completed</span>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </div>
-      ) : (
-        <h2 className="text-center">No payments found</h2>
-      )}
+      </div>
     </div>
   );
 };
